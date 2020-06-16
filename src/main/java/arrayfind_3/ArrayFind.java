@@ -1,6 +1,4 @@
-package ArrayFind_3;
-
-import com.sun.deploy.security.ruleset.DRSResult;
+package arrayfind_3;
 
 import java.util.HashMap;
 import java.util.Map;
