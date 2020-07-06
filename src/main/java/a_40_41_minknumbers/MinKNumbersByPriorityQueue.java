@@ -1,4 +1,4 @@
-package a_41_minknumbers;
+package a_40_41_minknumbers;
 
 import java.util.*;
 
