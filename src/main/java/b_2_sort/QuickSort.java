@@ -29,7 +29,7 @@ public class QuickSort {
 
     private static int partition(int[] nums, int start, int end) {
         int pivot = nums[end];
-        int left = start; //left表示所有已处理的小于pivot的数后一个数的索引（第一个比pivot大的数的索引，所有最后会和pivot交换）
+        int left = start; //left表示所有已处理的小于pivot的数的 后一个数 的索引（第一个比pivot大的数的索引，所有最后会和pivot交换）
         int right = start; //right表示所有已处理的数的最后一个的索引
         int temp = 0; //用于交换
         while (right <= end - 1) {
