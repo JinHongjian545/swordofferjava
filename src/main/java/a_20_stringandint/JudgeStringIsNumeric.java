@@ -16,7 +16,7 @@ public class JudgeStringIsNumeric {
         if (string == null || string.isEmpty()) {
             return false;
         }
-        String regExp = "([+-]?\\d+)?(\\.\\d+)?([eE][+-]?\\d+)?";
+        String regExp = "[+-]?(\\d+)?(\\.\\d+)?([eE][+-]?\\d+)?";
 
         Pattern compile = Pattern.compile(regExp);
         Matcher matcher = compile.matcher(string);
@@ -32,6 +32,7 @@ public class JudgeStringIsNumeric {
                 ".\n" +
                 "  \n" +
                 " \n" +
+                "-.123\n" +
                 "-123\n" +
                 "3.1456\n" +
                 "3.1456e\n" +
