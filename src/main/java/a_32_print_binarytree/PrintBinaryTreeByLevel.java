@@ -1,6 +1,5 @@
-package a_32_print_binarytree_by_level;
+package a_32_print_binarytree;
 
-import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 

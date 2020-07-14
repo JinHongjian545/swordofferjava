@@ -1,4 +1,4 @@
-package a_32_print_binarytree_by_level;
+package a_32_print_binarytree;
 
 public class BinaryTreeNode {
     public int value;
