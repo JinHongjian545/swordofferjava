@@ -33,7 +33,7 @@ public class QuickSort {
         int right = start; //right表示所有已处理的数的最后一个的索引
         int temp = 0; //用于交换
         while (right <= end - 1) {
-            if (nums[right] < pivot) {
+            if (nums[right] < pivot) { //
                 temp = nums[right];
                 nums[right] = nums[left];
                 nums[left] = temp;
