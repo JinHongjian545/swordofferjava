@@ -43,21 +43,22 @@ public class ThreadPoolTest {
         System.out.println("主线程输出");
 
         fixedThreadPool.shutdown();
-        while(true){
-            if(fixedThreadPool.isTerminated()){
+        while (true) {
+            if (fixedThreadPool.isTerminated()) {
                 System.out.println("==================== 所有的子线程都结束了 ==================");
                 break;
             }
             Thread.sleep(1000);
         }
 
-        if (!future.isDone()){
+        if (!future.isDone()) {
             System.out.println("子线程Future还没执行完");
         }
 
         System.out.println(future.get()); //这里如果子线程没有执行完则会阻塞
 
         System.out.println("TEST DONE");
+
     }
 
 }

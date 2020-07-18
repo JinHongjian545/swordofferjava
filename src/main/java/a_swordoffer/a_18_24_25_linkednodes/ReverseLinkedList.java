@@ -10,6 +10,7 @@ public class ReverseLinkedList {
     /**
      * 反转链表，不使用额外空间, 如可以使用额外空间的话直接使用栈存储一下
      *
+     * 1 - 2 - 3 - 4 - 5 - 6
      * @param head
      * @return
      */
