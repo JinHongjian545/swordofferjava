@@ -1,6 +1,7 @@
 package a_swordoffer.a_18_24_25_linkednodes;
 
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -8,17 +9,17 @@ import java.util.Stack;
  */
 public class ReverseLinkedList {
     /**
-     * 反转链表，不使用额外空间, 如可以使用额外空间的话直接使用栈存储一下
+     * 反转链表，使用常数额外空间, 如可以使用任意额外空间的话直接使用栈存储一下
      *
-     * 1 - 2 - 3 - 4 - 5 - 6
      * @param head
      * @return
      */
     public static ListNode reverseLinkedList(ListNode head) {
+        //这个reversedLast因为链表反转后指向相反，因此reversedLast就是reversedHead，直接返回即可
         ListNode reversedLast = null;
         ListNode unReversedFirst = head;
         ListNode currentNode;
-        while (unReversedFirst != null) {
+        while (unReversedFirst != null) { //注意下面这几次交换和赋值的顺序不能变
             currentNode = unReversedFirst;
             unReversedFirst = unReversedFirst.next;
             currentNode.next = reversedLast;
@@ -27,6 +28,12 @@ public class ReverseLinkedList {
         return reversedLast;
     }
 
+    /**
+     * 反转链表，使用栈来做临时存储
+     *
+     * @param head
+     * @return
+     */
     private static ListNode reverseLinkedListByStack(ListNode head) {
         if (head == null) {
             return null;
@@ -66,6 +73,7 @@ public class ReverseLinkedList {
         //基于栈的反转
         ListNode reversedHead2 = reverseLinkedListByStack(reversedHead);
         printList(reversedHead2);
+
     }
 
     static void printList(ListNode head) {
@@ -81,14 +89,3 @@ public class ReverseLinkedList {
 }
 
 
-class ListNode {
-    int value;
-    ListNode next;
-
-    public ListNode(int value) {
-        this.value = value;
-    }
-
-    public ListNode() {
-    }
-}
