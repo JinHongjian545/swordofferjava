@@ -1,8 +1,6 @@
 package c_1_mydatastructure;
 
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
 
 /**
  * @program: swordofferjava
@@ -11,7 +9,7 @@ import java.util.LinkedHashMap;
  * @create: 2020-07-22
  **/
 public class LRUCache<K, V> {
-    class Node<K, V> {
+    static class Node<K, V> {
         K k;
         V v;
         Node<K, V> before;
@@ -63,24 +61,26 @@ public class LRUCache<K, V> {
         //缓存中没有
         if (kvNode == null) {
             Node<K, V> newNode = new Node<>(k, v);
-            addToHead(newNode);
             hashMap.put(k, newNode);
-            if (size == capacity) { //缓存满
-                deleteTail();
+            addToHead(newNode);
+            if (size == capacity) { //缓存已满，注意删除尾节点后清除hashMap对应值
+                Node<K, V> kvNode1 = deleteTail();
+                hashMap.remove(kvNode1);
             } else { //缓存未满
                 size++;
             }
         } else { //缓存中已经存在该节点
-            removeNode(kvNode);
             kvNode.v = v;
+            removeNode(kvNode);
             addToHead(kvNode);
         }
     }
 
     //添加到链表头部
-    private void addToHead(Node<K, V> kvNode) {
+    private void addToHead(Node<K, V> kvNode) { //注意这里是四个方向
         kvNode.after = head.after;
         kvNode.before = head;
+        head.after.before = kvNode;
         head.after = kvNode;
     }
 
@@ -91,8 +91,10 @@ public class LRUCache<K, V> {
     }
 
     //删除链表尾部节点
-    private void deleteTail() {
-        removeNode(tail.before);
+    private Node<K, V> deleteTail() {
+        Node<K, V> before = tail.before;
+        removeNode(before);
+        return before;
     }
 
     public void printLRUCache() {

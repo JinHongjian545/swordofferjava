@@ -1,4 +1,4 @@
-package a_swordoffer.a_52_treedepth;
+package a_swordoffer.a_55_treedepth;
 
 public class BinaryTreeNode {
     public int value;

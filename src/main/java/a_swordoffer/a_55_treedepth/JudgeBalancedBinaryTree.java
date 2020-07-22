@@ -1,7 +1,6 @@
-package a_swordoffer.a_52_treedepth;
+package a_swordoffer.a_55_treedepth;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * 判断一颗二叉树是不是平衡二叉树
