@@ -16,12 +16,12 @@ public class PrintBinaryTreeByLevel {
      *
      * @param root
      */
-    private static void printBinaryTreeByLevel(BinaryTreeNode root) {
+    private static void printBinaryTreeByLevel(TreeNode root) {
         if (root == null) {
             return;
         }
-        Queue<BinaryTreeNode> queue = new LinkedList<>();
-        BinaryTreeNode node;
+        Queue<TreeNode> queue = new LinkedList<>();
+        TreeNode node;
         queue.offer(root);
         while (!queue.isEmpty()) {
             node = queue.poll();
@@ -41,13 +41,13 @@ public class PrintBinaryTreeByLevel {
          *    6     10
          *  5   7   9   11
          */
-        BinaryTreeNode node1 = new BinaryTreeNode(8);
-        BinaryTreeNode node2 = new BinaryTreeNode(6);
-        BinaryTreeNode node3 = new BinaryTreeNode(10);
-        BinaryTreeNode node4 = new BinaryTreeNode(5);
-        BinaryTreeNode node5 = new BinaryTreeNode(7);
-        BinaryTreeNode node6 = new BinaryTreeNode(9);
-        BinaryTreeNode node7 = new BinaryTreeNode(11);
+        TreeNode node1 = new TreeNode(8);
+        TreeNode node2 = new TreeNode(6);
+        TreeNode node3 = new TreeNode(10);
+        TreeNode node4 = new TreeNode(5);
+        TreeNode node5 = new TreeNode(7);
+        TreeNode node6 = new TreeNode(9);
+        TreeNode node7 = new TreeNode(11);
 
         node1.pLeft = node2;
         node1.pRight = node3;

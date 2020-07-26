@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class PrintBinaryTreeByZhiCharacter {
-    public static ArrayList<ArrayList<Integer> > printBinaryTreeByZhiCharacter(BinaryTreeNode pRoot) {
+    public static ArrayList<ArrayList<Integer> > printBinaryTreeByZhiCharacter(TreeNode pRoot) {
         ArrayList<ArrayList<Integer> > result = new ArrayList<>();
         if (pRoot==null){
             return result;
         }
-        Stack<BinaryTreeNode> stack1 = new Stack<>();
-        Stack<BinaryTreeNode> stack2 = new Stack<>();
+        Stack<TreeNode> stack1 = new Stack<>();
+        Stack<TreeNode> stack2 = new Stack<>();
 
         stack1.push(pRoot);
-        BinaryTreeNode node;
+        TreeNode node;
         while(true){
             ArrayList<Integer> ints = new ArrayList<>();
             while(!stack1.isEmpty()){
@@ -57,13 +57,13 @@ public class PrintBinaryTreeByZhiCharacter {
          *    6     10
          *  5   7   9   11
          */
-        BinaryTreeNode node1 = new BinaryTreeNode(8);
-        BinaryTreeNode node2 = new BinaryTreeNode(6);
-        BinaryTreeNode node3 = new BinaryTreeNode(10);
-        BinaryTreeNode node4 = new BinaryTreeNode(5);
-        BinaryTreeNode node5 = new BinaryTreeNode(7);
-        BinaryTreeNode node6 = new BinaryTreeNode(9);
-        BinaryTreeNode node7 = new BinaryTreeNode(11);
+        TreeNode node1 = new TreeNode(8);
+        TreeNode node2 = new TreeNode(6);
+        TreeNode node3 = new TreeNode(10);
+        TreeNode node4 = new TreeNode(5);
+        TreeNode node5 = new TreeNode(7);
+        TreeNode node6 = new TreeNode(9);
+        TreeNode node7 = new TreeNode(11);
 
         node1.pLeft = node2;
         node1.pRight = node3;
