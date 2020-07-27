@@ -1,5 +1,7 @@
 package a_swordoffer.a_32_print_binarytree;
 
+import a_swordoffer.a_0_datastructure.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -16,7 +18,7 @@ public class PrintBinaryTreeByLevel {
      *
      * @param root
      */
-    private static void printBinaryTreeByLevel(TreeNode root) {
+    public static void printBinaryTreeByLevel(TreeNode root) {
         if (root == null) {
             return;
         }
@@ -25,12 +27,12 @@ public class PrintBinaryTreeByLevel {
         queue.offer(root);
         while (!queue.isEmpty()) {
             node = queue.poll();
-            System.out.print(node.value + "\t"); //print
-            if (node.pLeft != null) {
-                queue.offer(node.pLeft);
+            System.out.print(node.val + "\t"); //print
+            if (node.left != null) {
+                queue.offer(node.left);
             }
-            if (node.pRight != null) {
-                queue.offer(node.pRight);
+            if (node.right != null) {
+                queue.offer(node.right);
             }
         }
     }
@@ -49,12 +51,12 @@ public class PrintBinaryTreeByLevel {
         TreeNode node6 = new TreeNode(9);
         TreeNode node7 = new TreeNode(11);
 
-        node1.pLeft = node2;
-        node1.pRight = node3;
-        node2.pLeft = node4;
-        node2.pRight = node5;
-        node3.pLeft = node6;
-        node3.pRight = node7;
+        node1.left = node2;
+        node1.right = node3;
+        node2.left = node4;
+        node2.right = node5;
+        node3.left = node6;
+        node3.right = node7;
 
         printBinaryTreeByLevel(node1);
     }
