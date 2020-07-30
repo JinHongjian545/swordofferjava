@@ -1,5 +1,7 @@
 package a_swordoffer.a_54_kthnode_binarytree;
 
+import a_swordoffer.a_0_datastructure.TreeNode;
+
 public class KthNode {
 
     /**

@@ -1,5 +1,7 @@
 package a_swordoffer.a_32_print_binarytree;
 
+import a_swordoffer.a_0_datastructure.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -18,13 +20,13 @@ public class PrintBinaryTreeByZhiCharacter {
             ArrayList<Integer> ints = new ArrayList<>();
             while(!stack1.isEmpty()){
                 node = stack1.pop();
-                if(node.pLeft != null){
-                    stack2.push(node.pLeft);
+                if(node.left != null){
+                    stack2.push(node.left);
                 }
-                if(node.pRight != null){
-                    stack2.push(node.pRight);
+                if(node.right != null){
+                    stack2.push(node.right);
                 }
-                ints.add(node.value);
+                ints.add(node.val);
             }
             if(!ints.isEmpty())
                 result.add(ints);
@@ -32,13 +34,13 @@ public class PrintBinaryTreeByZhiCharacter {
             ArrayList<Integer> ints2 = new ArrayList<>();
             while(!stack2.isEmpty()){
                 node = stack2.pop();
-                if(node.pRight != null){
-                    stack1.push(node.pRight);
+                if(node.right != null){
+                    stack1.push(node.right);
                 }
-                if(node.pLeft != null){
-                    stack1.push(node.pLeft);
+                if(node.left != null){
+                    stack1.push(node.left);
                 }
-                ints2.add(node.value);
+                ints2.add(node.val);
             }
             if(!ints2.isEmpty())
                 result.add(ints2);
@@ -65,12 +67,12 @@ public class PrintBinaryTreeByZhiCharacter {
         TreeNode node6 = new TreeNode(9);
         TreeNode node7 = new TreeNode(11);
 
-        node1.pLeft = node2;
-        node1.pRight = node3;
-        node2.pLeft = node4;
-        node2.pRight = node5;
-        node3.pLeft = node6;
-        node3.pRight = node7;
+        node1.left = node2;
+        node1.right = node3;
+        node2.left = node4;
+        node2.right = node5;
+        node3.left = node6;
+        node3.right = node7;
 
         ArrayList<ArrayList<Integer>> arrayLists = printBinaryTreeByZhiCharacter(node1);
         System.out.println(arrayLists);

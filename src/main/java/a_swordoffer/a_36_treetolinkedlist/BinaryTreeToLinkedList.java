@@ -1,5 +1,6 @@
 package a_swordoffer.a_36_treetolinkedlist;
 
+import a_swordoffer.a_0_datastructure.TreeNode;
 import sun.reflect.generics.tree.Tree;
 
 import java.util.LinkedList;
