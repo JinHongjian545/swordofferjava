@@ -1,7 +1,6 @@
-package d_bytedance_realquestion;
+package d_company_real.bytedance;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**

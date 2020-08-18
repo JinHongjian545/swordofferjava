@@ -1,4 +1,4 @@
-package d_bytedance_realquestion;
+package d_company_real.bytedance;
 
 import java.util.Scanner;
 
@@ -9,15 +9,6 @@ import java.util.Scanner;
  * @create: 2020-07-25
  **/
 public class LinkedListProblem {
-    //静态内部类，链表的节点
-    static class Node{
-        int val;
-        Node prev;
-        Node next;
-        Node(int val){
-            this.val = val;
-        }
-    }
 
     private static Node dealLinkedList(Node head){
         if(head == null){
@@ -98,5 +89,15 @@ public class LinkedListProblem {
             }
             newHead = newHead.next;
         }
+    }
+}
+
+//静态内部类，链表的节点
+class Node{
+    int val;
+    Node prev;
+    Node next;
+    Node(int val){
+        this.val = val;
     }
 }
