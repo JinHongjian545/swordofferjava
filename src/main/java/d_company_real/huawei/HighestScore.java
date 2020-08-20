@@ -1,4 +1,4 @@
-package d_company_real.huwei;
+package d_company_real.huawei;
 import java.util.Scanner;
 
 /**
