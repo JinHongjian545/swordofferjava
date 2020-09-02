@@ -1,8 +1,5 @@
 package h_multi_threads.printNumer_twoThreads;
 
-import a_swordoffer.a_26_27_28_sub_mirror_tree.TheSameTree;
-
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ByAtomicInteger {
