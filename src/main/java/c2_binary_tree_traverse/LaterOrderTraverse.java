@@ -18,7 +18,7 @@ public class LaterOrderTraverse {
         }
     }
 
-    //非递归遍历 前序：根-左-右
+    //非递归遍历 后序：左-右-根
     private static void printTreePreOrderByStack(TreeNode root) {
         if (root == null) {
             return;
@@ -34,15 +34,14 @@ public class LaterOrderTraverse {
                 cur = cur.left;
             } else { //cur==null 的情况
                 cur = stack.pop();
-
-                if (cur.right == null || cur.right == pre) {
+                if (cur.right == null || cur.right == pre) { //右子节点为空，或者右子节点就是上次访问过的节点，直接输出当前节点
                     System.out.print(cur.val + " ");
                     pre = cur;
                     cur = null;
                 } else {
-                    stack.push(cur);
+                    stack.push(cur); //把拿出来的这个还回去，这个节点还没输出
                     cur = cur.right;
-                    stack.push(cur);
+                    stack.push(cur); //右节点放进去，进行下一次循环，继续找到右节点的最左子节点
                     cur = cur.left;
                 }
             }
