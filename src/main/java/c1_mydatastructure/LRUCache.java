@@ -65,7 +65,7 @@ public class LRUCache<K, V> {
             addToHead(newNode);
             if (size == capacity) { //缓存已满，注意删除尾节点后清除hashMap对应值
                 Node<K, V> kvNode1 = deleteTail();
-                hashMap.remove(kvNode1);
+                hashMap.remove(kvNode1.k);
             } else { //缓存未满
                 size++;
             }

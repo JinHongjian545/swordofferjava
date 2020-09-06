@@ -1,6 +1,4 @@
-package g_reflect;
-
-import java.util.Objects;
+package g_java_basic.reflect;
 
 public class BinaryTreeNode {
     private int value;
