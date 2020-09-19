@@ -1,4 +1,6 @@
-package a_swordoffer.a07_08_binarytree;
+package a_swordoffer.a08_binarytree_next_node;
+
+import a_swordoffer.a00_datastructure.BinaryTreeNodeWithParentPointer;
 
 public class NextNodeOfBinaryTree {
     /**
