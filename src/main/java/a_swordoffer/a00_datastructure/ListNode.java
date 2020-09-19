@@ -16,4 +16,14 @@ public class ListNode {
 
     public ListNode() {
     }
+
+    public static void printList(ListNode head) {
+        while (head != null) {
+            if (head.next != null)
+                System.out.print(head.val + " --> ");
+            else
+                System.out.println(head.val);
+            head = head.next;
+        }
+    }
 }

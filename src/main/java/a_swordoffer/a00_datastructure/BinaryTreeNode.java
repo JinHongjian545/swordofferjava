@@ -1,4 +1,4 @@
-package a_swordoffer.a07_08_binarytree;
+package a_swordoffer.a00_datastructure;
 
 public class BinaryTreeNode {
     public int value;

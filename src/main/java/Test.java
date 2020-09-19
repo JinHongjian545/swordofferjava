@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +15,11 @@ public class Test {
         ArrayList<String> arrayList = new ArrayList<>();
 
         List<String> synchronizedList = Collections.synchronizedList(arrayList);
-
+        int i = Integer.MAX_VALUE;
+        System.out.println(i);
+        //Exception in thread "main" java.lang.OutOfMemoryError: Requested array size exceeds VM limit
+        int[] arr = new int[i];
+        arr[i - 1] = 5;
+        System.out.println(arr[i - 1]);
     }
 }
