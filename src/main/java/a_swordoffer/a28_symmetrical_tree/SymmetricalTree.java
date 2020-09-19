@@ -1,4 +1,4 @@
-package a_swordoffer.a26_27_28_sub_mirror_tree;
+package a_swordoffer.a28_symmetrical_tree;
 
 import a_swordoffer.a00_datastructure.TreeNode;
 
