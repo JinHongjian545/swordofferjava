@@ -1,4 +1,4 @@
-package a_swordoffer.a20_stringandint;
+package a_swordoffer.a20_string_represents_int;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
