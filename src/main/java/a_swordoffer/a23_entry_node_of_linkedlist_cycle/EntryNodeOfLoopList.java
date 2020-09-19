@@ -1,4 +1,4 @@
-package a_swordoffer.a22_23_findnodes_in_linkedlist;
+package a_swordoffer.a23_entry_node_of_linkedlist_cycle;
 
 public class EntryNodeOfLoopList {
     /**
