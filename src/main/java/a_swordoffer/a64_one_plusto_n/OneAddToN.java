@@ -1,4 +1,4 @@
-package a_swordoffer.a64_1plus_to_n;
+package a_swordoffer.a64_one_plusto_n;
 
 public class OneAddToN {
     /**
