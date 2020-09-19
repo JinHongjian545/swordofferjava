@@ -1,5 +1,7 @@
-package a_swordoffer.a18_24_25_linkednodes;
+package a_swordoffer.a24_reverse_linkedlist;
 
+
+import a_swordoffer.a00_datastructure.ListNode;
 
 import java.util.Stack;
 
@@ -78,9 +80,9 @@ public class ReverseLinkedList {
     static void printList(ListNode head) {
         while (head != null) {
             if (head.next != null)
-                System.out.print(head.value + " --> ");
+                System.out.print(head.val + " --> ");
             else
-                System.out.println(head.value);
+                System.out.println(head.val);
             head = head.next;
         }
     }
