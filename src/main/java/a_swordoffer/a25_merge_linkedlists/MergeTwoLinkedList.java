@@ -1,4 +1,6 @@
-package a_swordoffer.a18_24_25_linkednodes;
+package a_swordoffer.a25_merge_linkedlists;
+
+import a_swordoffer.a00_datastructure.ListNode;
 
 /**
  * 合并两个有序的链表
@@ -26,7 +28,7 @@ public class MergeTwoLinkedList {
 
         ListNode mergedHead = null;
         //找到Merge后的头节点
-        if (currentNodeFromHead1.value > currentNodeFromHead2.value) {
+        if (currentNodeFromHead1.val > currentNodeFromHead2.val) {
             mergedHead = currentNodeFromHead2;
             currentNodeFromHead2 = currentNodeFromHead2.next;
         } else {
@@ -37,7 +39,7 @@ public class MergeTwoLinkedList {
         //merge
         ListNode node = mergedHead;
         while (currentNodeFromHead1 != null && currentNodeFromHead2 != null) {
-            if (currentNodeFromHead1.value > currentNodeFromHead2.value) {
+            if (currentNodeFromHead1.val > currentNodeFromHead2.val) {
                 node.next = currentNodeFromHead2;
                 currentNodeFromHead2 = currentNodeFromHead2.next;
             } else {
@@ -69,7 +71,7 @@ public class MergeTwoLinkedList {
 
         //递归
         ListNode mergedHead = null;
-        if (head1.value < head2.value) {
+        if (head1.val < head2.val) {
             mergedHead = head1;
             mergedHead.next = mergeTwoLinkedList2(head1.next, head2);
         } else {
@@ -128,9 +130,9 @@ public class MergeTwoLinkedList {
     private static void printList(ListNode head) {
         while (head != null) {
             if (head.next != null)
-                System.out.print(head.value + " --> ");
+                System.out.print(head.val + " --> ");
             else
-                System.out.println(head.value);
+                System.out.println(head.val);
             head = head.next;
         }
     }
