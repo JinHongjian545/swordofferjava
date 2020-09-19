@@ -1,4 +1,4 @@
-package a_swordoffer.a40_41_minknumbers;
+package a_swordoffer.a40__min_k_numbers;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package a_swordoffer.a40_41_minknumbers;
+package a_swordoffer.a41_middle_number_in_stream;
 
 import java.util.PriorityQueue;
 
