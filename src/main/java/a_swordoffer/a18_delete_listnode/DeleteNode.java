@@ -1,4 +1,6 @@
-package a_swordoffer.a18_24_25_linkednodes;
+package a_swordoffer.a18_delete_listnode;
+
+import a_swordoffer.a00_datastructure.ListNode;
 
 /**
  * 使用O（1）的时间删除节点：
@@ -24,7 +26,7 @@ public class DeleteNode {
                 }
             }
         } else {
-            target.value = target.next.value;
+            target.val = target.next.val;
             target.next = target.next.next;
         }
     }
@@ -38,12 +40,12 @@ public class DeleteNode {
         }
 
         ListNode head = nodes[0];
-        ReverseLinkedList.printList(head);
+        ListNode.printList(head);
 
         deleteNode(head, nodes[5]);
-        ReverseLinkedList.printList(head);
+        ListNode.printList(head);
 
         deleteNode(head, nodes[10]);
-        ReverseLinkedList.printList(head);
+        ListNode.printList(head);
     }
 }
