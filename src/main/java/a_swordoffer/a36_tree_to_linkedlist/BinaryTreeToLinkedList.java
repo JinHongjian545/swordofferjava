@@ -1,4 +1,4 @@
-package a_swordoffer.a36_treetolinkedlist;
+package a_swordoffer.a36_tree_to_linkedlist;
 
 import a_swordoffer.a00_datastructure.TreeNode;
 
