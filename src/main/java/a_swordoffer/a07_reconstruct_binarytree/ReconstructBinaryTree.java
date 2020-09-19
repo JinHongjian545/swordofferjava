@@ -1,4 +1,6 @@
-package a_swordoffer.a07_08_binarytree;
+package a_swordoffer.a07_reconstruct_binarytree;
+
+import a_swordoffer.a00_datastructure.BinaryTreeNode;
 
 import java.util.Arrays;
 
