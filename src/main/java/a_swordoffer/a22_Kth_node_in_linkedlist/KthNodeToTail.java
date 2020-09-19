@@ -1,4 +1,4 @@
-package a_swordoffer.a22_23_findnodes_in_linkedlist;
+package a_swordoffer.a22_Kth_node_in_linkedlist;
 
 public class KthNodeToTail {
     /**
