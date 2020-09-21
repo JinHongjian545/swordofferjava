@@ -24,7 +24,7 @@ public class HeapSort {
             swap(arr, 0, size - 1);
             size--;
             //在交换后重新调整堆，此时size外的数据已经有序，不再更新
-            heapify(arr, 0, size);
+            heapify(arr, size);
         }
     }
 
@@ -45,9 +45,8 @@ public class HeapSort {
     }
 
     //将剩余的数构造成大根堆（通过顶端的数下降） top -> bottom
-    private static void heapify(int[] arr, int index, int size) {
-        int left = index * 2 + 1;
-        int right = left + 1;
+    private static void heapify(int[] arr, int size) {
+        int index = 0, left = 1, right = 2;
         int largeIndex;
         while (left < size) {
             //这个if-else找到左右孩子节点中更大的节点索引，访问右子节点时需要确保right索引在size范围内
