@@ -10,7 +10,7 @@ import java.util.concurrent.CountDownLatch;
  * */
 public class ModifyOneNumber_Meituan {
     private static int a = 10;
-    private static Object mutex = new Object();
+    private static final Object mutex = new Object();
 
     public static void main(String[] args) {
         Thread A = new Thread(new Runnable() {
@@ -21,7 +21,7 @@ public class ModifyOneNumber_Meituan {
                         if (a == 15) {
                             try {
                                 mutex.wait();
-                            } catch (Exception e) {
+                            } catch (Exception ignored) {
                             }
                         }
                         if (a < 15) {
@@ -43,7 +43,7 @@ public class ModifyOneNumber_Meituan {
                         if (a == 0) {
                             try {
                                 mutex.wait();
-                            } catch (Exception e) {
+                            } catch (Exception ignored) {
                             }
                         }
                         if (a > 0) {
